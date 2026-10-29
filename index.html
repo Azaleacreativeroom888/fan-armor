@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>緋縅 | 甲冑・刀・銃を学ぶ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#b22222;
+  --red-deep:#7d1515;
+  --iron:#2a2423;
+  --iron-soft:#4a4140;
+  --paper:#f3efe9;
+  --line:#d8cfc6;
+  --serif:"Shippori Mincho","Yu Mincho","Hiragino Mincho ProN",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--iron);line-height:1.9;font-size:16px}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+/* header */
+header{background:var(--iron);color:var(--paper)}
+.bar{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-weight:800;font-size:1.3rem;letter-spacing:.12em;text-decoration:none}
+nav ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:.95rem;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current="page"]{border-bottom-color:var(--red)}
+
+/* hero: 緋縅 lacing */
+.hero{background:var(--red);color:#fff;position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(90deg,transparent 0 34px,rgba(255,255,255,.22) 34px 38px,transparent 38px 72px),
+    repeating-linear-gradient(0deg,transparent 0 46px,rgba(42,36,35,.28) 46px 50px);
+}
+.hero-in{position:relative;max-width:960px;margin:0 auto;padding:84px 20px 76px}
+.hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(3.2rem,11vw,6.4rem);line-height:1.1;letter-spacing:.14em;background:var(--red);display:inline-block;padding:.08em .22em .08em .1em}
+.hero p{margin-top:22px;max-width:30em;background:var(--red);display:inline-block;padding:6px 14px 6px 0;font-size:1.05rem}
+.hero .go{display:block;margin-top:30px}
+.btn{display:inline-block;background:var(--iron);color:var(--paper);text-decoration:none;padding:11px 26px;font-weight:500;border:2px solid var(--iron)}
+.btn:hover{background:var(--paper);color:var(--iron)}
+
+main{max-width:960px;margin:0 auto;padding:0 20px}
+section{padding:64px 0 8px}
+h2{font-family:var(--serif);font-weight:800;font-size:1.7rem;letter-spacing:.08em;padding-left:14px;border-left:8px solid var(--red);line-height:1.4;margin-bottom:26px}
+.lead{max-width:38em;margin-bottom:30px}
+
+/* 三つの柱 */
+.pillar{display:grid;grid-template-columns:96px 1fr;gap:6px 24px;padding:24px 0;border-top:1px solid var(--line)}
+.pillar:last-child{border-bottom:1px solid var(--line)}
+.kanji{font-family:var(--serif);font-weight:800;font-size:4.2rem;line-height:1;color:var(--red);grid-row:span 2}
+.pillar h3{font-family:var(--serif);font-size:1.25rem;letter-spacing:.06em}
+.pillar p{max-width:36em;color:var(--iron-soft)}
+
+/* blog teaser */
+.posts{list-style:none;max-width:38em}
+.posts li{padding:16px 0;border-bottom:1px solid var(--line)}
+.posts time{display:block;font-size:.85rem;color:var(--red-deep);font-weight:500}
+.more{display:inline-block;margin-top:18px;font-weight:500}
+
+/* gallery teaser */
+.frames{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-bottom:12px}
+.frame{aspect-ratio:3/4;background:var(--iron);color:var(--paper);display:flex;align-items:flex-end;padding:14px;font-size:.9rem;border-bottom:8px solid var(--red)}
+.frame:nth-child(2){aspect-ratio:1/1;align-self:end}
+.frame:nth-child(3){aspect-ratio:4/5}
+
+footer{margin-top:80px;background:var(--iron);color:#cfc6bf;text-align:center;padding:26px 20px;font-size:.85rem}
+
+@media (max-width:560px){
+  .pillar{grid-template-columns:64px 1fr;gap:4px 16px}
+  .kanji{font-size:3rem}
+  .hero-in{padding:60px 20px 54px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="index.html">緋縅</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html" aria-current="page">トップ</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="gallery.html">ギャラリー</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-in">
+    <h1>緋縅</h1>
+    <p>歴史の中で人を守り、戦いを支えた甲冑・刀・銃。その形と仕組みを学んで記録するサイトです。</p>
+    <span class="go"><a class="btn" href="blog.html">勉強ノートを読む</a></span>
+  </div>
+</div>
+
+<main>
+  <section>
+    <h2>学んでいること</h2>
+    <p class="lead">時代ごとに、身を守る道具も戦い方も大きく変わりました。ここでは次の三つを中心に勉強しています。</p>
+
+    <div class="pillar">
+      <div class="kanji" aria-hidden="true">甲</div>
+      <h3>甲冑</h3>
+      <p>平安の大鎧、機動力を重視した胴丸、戦国の当世具足まで。素材や縅（おどし）の違いから時代の変化を追います。</p>
+    </div>
+    <div class="pillar">
+      <div class="kanji" aria-hidden="true">刀</div>
+      <h3>刀</h3>
+      <p>太刀から打刀、脇差へ。反りや長さ、鍔や拵えが、甲冑や戦い方とどう結びついていたかを調べます。</p>
+    </div>
+    <div class="pillar">
+      <div class="kanji" aria-hidden="true">銃</div>
+      <h3>銃</h3>
+      <p>1543年に鉄砲が伝わってから、火縄銃は合戦と防具の考え方を変えました。弾を防ぐ具足の工夫にも注目します。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>最近の勉強ノート</h2>
+    <ul class="posts">
+      <li><time datetime="2026-10-28">2026.10.28</time>当世具足の胴の種類を整理した。兜の形が多すぎてまだ覚えきれない。</li>
+      <li><time datetime="2026-10-25">2026.10.25</time>大鎧と胴丸の違いを調べた。騎馬戦か徒歩戦かで形が変わるのが面白い。</li>
+    </ul>
+    <a class="more" href="blog.html">ブログをすべて見る</a>
+  </section>
+
+  <section>
+    <h2>ギャラリー</h2>
+    <p class="lead">防具をテーマにした漫画やイラストを載せていきます。</p>
+    <div class="frames">
+      <div class="frame">イラスト</div>
+      <div class="frame">漫画</div>
+      <div class="frame">イラスト</div>
+    </div>
+    <a class="more" href="gallery.html">ギャラリーを見る</a>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 緋縅</p>
+</footer>
+
+</body>
+</html>
