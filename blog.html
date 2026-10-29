@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ブログ | 緋縅</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#b22222;
+  --red-deep:#7d1515;
+  --iron:#2a2423;
+  --iron-soft:#4a4140;
+  --paper:#f3efe9;
+  --line:#d8cfc6;
+  --serif:"Shippori Mincho","Yu Mincho","Hiragino Mincho ProN",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--paper);color:var(--iron);line-height:1.9;font-size:16px}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+header{background:var(--iron);color:var(--paper)}
+.bar{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-weight:800;font-size:1.3rem;letter-spacing:.12em;text-decoration:none}
+nav ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:.95rem;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current="page"]{border-bottom-color:var(--red)}
+
+.title{background:var(--red);color:#fff;position:relative;overflow:hidden}
+.title::before{
+  content:"";position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(90deg,transparent 0 34px,rgba(255,255,255,.22) 34px 38px,transparent 38px 72px),
+    repeating-linear-gradient(0deg,transparent 0 46px,rgba(42,36,35,.28) 46px 50px);
+}
+.title-in{position:relative;max-width:960px;margin:0 auto;padding:44px 20px}
+.title h1{font-family:var(--serif);font-weight:800;font-size:clamp(2rem,7vw,3rem);letter-spacing:.14em;background:var(--red);display:inline-block;padding:.05em .2em .05em .1em;line-height:1.3}
+.title p{margin-top:10px;background:var(--red);display:inline-block;padding:2px 12px 2px 0}
+
+main{max-width:960px;margin:0 auto;padding:40px 20px 0}
+.feed{max-width:600px;margin:0 auto;background:#fff;border:1px solid var(--line)}
+.post{padding:18px 20px;border-bottom:1px solid var(--line);border-left:6px solid transparent}
+.post:last-child{border-bottom:0}
+.post:hover{border-left-color:var(--red)}
+.post time{display:block;font-size:.85rem;color:var(--red-deep);font-weight:500;margin-bottom:4px}
+.post p{overflow-wrap:anywhere}
+
+footer{margin-top:80px;background:var(--iron);color:#cfc6bf;text-align:center;padding:26px 20px;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="index.html">緋縅</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="blog.html" aria-current="page">ブログ</a></li>
+        <li><a href="gallery.html">ギャラリー</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="title">
+  <div class="title-in">
+    <h1>ブログ</h1>
+    <p>勉強の進捗を日記のように書いています。</p>
+  </div>
+</div>
+
+<main>
+  <div class="feed">
+    <article class="post">
+      <time datetime="2026-10-28">2026.10.28</time>
+      <p>当世具足の胴の種類を整理した。兜の形が多すぎてまだ覚えきれない。</p>
+    </article>
+    <article class="post">
+      <time datetime="2026-10-25">2026.10.25</time>
+      <p>大鎧と胴丸の違いを調べた。騎馬戦か徒歩戦かで形が変わるのが面白い。</p>
+    </article>
+    <article class="post">
+      <time datetime="2026-10-22">2026.10.22</time>
+      <p>太刀と打刀の違いをまとめた。刃を下にして吊るすか、腰に差すかで呼び方も変わる。</p>
+    </article>
+    <article class="post">
+      <time datetime="2026-10-19">2026.10.19</time>
+      <p>火縄銃が伝わってから、具足がどう変わったかを読んだ。弾を防ぐために胴を厚くしたらしい。</p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 緋縅</p>
+</footer>
+
+</body>
+</html>
