@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ギャラリー | 緋縅</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#b22222;
+  --red-deep:#7d1515;
+  --iron:#2a2423;
+  --iron-soft:#4a4140;
+  --paper:#f3efe9;
+  --line:#d8cfc6;
+  --serif:"Shippori Mincho","Yu Mincho","Hiragino Mincho ProN",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--paper);color:var(--iron);line-height:1.9;font-size:16px}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+header{background:var(--iron);color:var(--paper)}
+.bar{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-weight:800;font-size:1.3rem;letter-spacing:.12em;text-decoration:none}
+nav ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:.95rem;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current="page"]{border-bottom-color:var(--red)}
+
+.title{background:var(--red);color:#fff;position:relative;overflow:hidden}
+.title::before{
+  content:"";position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(90deg,transparent 0 34px,rgba(255,255,255,.22) 34px 38px,transparent 38px 72px),
+    repeating-linear-gradient(0deg,transparent 0 46px,rgba(42,36,35,.28) 46px 50px);
+}
+.title-in{position:relative;max-width:960px;margin:0 auto;padding:44px 20px}
+.title h1{font-family:var(--serif);font-weight:800;font-size:clamp(2rem,7vw,3rem);letter-spacing:.14em;background:var(--red);display:inline-block;padding:.05em .2em .05em .1em;line-height:1.3}
+.title p{margin-top:10px;background:var(--red);display:inline-block;padding:2px 12px 2px 0}
+
+main{max-width:960px;margin:0 auto;padding:0 20px}
+section{padding:56px 0 8px}
+h2{font-family:var(--serif);font-weight:800;font-size:1.6rem;letter-spacing:.08em;padding-left:14px;border-left:8px solid var(--red);line-height:1.4;margin-bottom:24px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px;align-items:start}
+figure{background:#fff;border:1px solid var(--line);border-bottom:8px solid var(--red)}
+.art{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;background:var(--iron);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:.9rem}
+figure.wide .art{aspect-ratio:4/3}
+figcaption{padding:10px 14px 12px;font-size:.92rem}
+figcaption time{display:block;font-size:.8rem;color:var(--red-deep);font-weight:500}
+
+footer{margin-top:80px;background:var(--iron);color:#cfc6bf;text-align:center;padding:26px 20px;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="index.html">緋縅</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="gallery.html" aria-current="page">ギャラリー</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="title">
+  <div class="title-in">
+    <h1>ギャラリー</h1>
+    <p>防具をテーマにした漫画とイラストです。</p>
+  </div>
+</div>
+
+<main>
+  <section>
+    <h2>イラスト</h2>
+    <div class="grid">
+      <!-- 画像に差し替えるときは <div class="art">…</div> を
+           <img class="art" src="images/ファイル名.png" alt="作品の説明"> に置き換えてね -->
+      <figure>
+        <div class="art">イラスト 1</div>
+        <figcaption><time datetime="2026-10-28">2026.10.28</time>タイトル</figcaption>
+      </figure>
+      <figure>
+        <div class="art">イラスト 2</div>
+        <figcaption><time datetime="2026-10-25">2026.10.25</time>タイトル</figcaption>
+      </figure>
+      <figure>
+        <div class="art">イラスト 3</div>
+        <figcaption><time datetime="2026-10-22">2026.10.22</time>タイトル</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>漫画</h2>
+    <div class="grid">
+      <figure class="wide">
+        <div class="art">漫画 1</div>
+        <figcaption><time datetime="2026-10-20">2026.10.20</time>タイトル</figcaption>
+      </figure>
+      <figure class="wide">
+        <div class="art">漫画 2</div>
+        <figcaption><time datetime="2026-10-15">2026.10.15</time>タイトル</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 緋縅</p>
+</footer>
+
+</body>
+</html>
